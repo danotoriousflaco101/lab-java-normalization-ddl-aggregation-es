@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 OPR/117.0.0.0" version="27.0.5">
+  <diagram name="ERD Flights" id="VecudQn_ZREU4psWFpnC">
+    <mxGraphModel dx="665" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="J_NreWz0bblFOMJx16Kt-66" value="customers" style="shape=swimlane;labelBackgroundColor=#FFF4C3;" vertex="1" parent="1">
+          <mxGeometry x="140" y="300" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="J_NreWz0bblFOMJx16Kt-67" value="id (PK)&#xa;name&#xa;status&#xa;total_mileage" style="text" vertex="1" parent="J_NreWz0bblFOMJx16Kt-66">
+          <mxGeometry x="10" y="40" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="J_NreWz0bblFOMJx16Kt-68" value="aircrafts" style="shape=swimlane;labelBackgroundColor=#D4E1F5;" vertex="1" parent="1">
+          <mxGeometry x="140" y="70" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="J_NreWz0bblFOMJx16Kt-69" value="id (PK)&#xa;name&#xa;total_seats" style="text" vertex="1" parent="J_NreWz0bblFOMJx16Kt-68">
+          <mxGeometry x="10" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J_NreWz0bblFOMJx16Kt-70" value="flights" style="shape=swimlane;labelBackgroundColor=#CDA2BE;" vertex="1" parent="1">
+          <mxGeometry x="500" y="60" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="J_NreWz0bblFOMJx16Kt-71" value="flight_number (PK)&#xa;aircraft_id (FK)&#xa;mileage" style="text" vertex="1" parent="J_NreWz0bblFOMJx16Kt-70">
+          <mxGeometry x="10" y="40" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="J_NreWz0bblFOMJx16Kt-72" value="bookings" style="shape=swimlane;labelBackgroundColor=#D5E8D4;" vertex="1" parent="1">
+          <mxGeometry x="500" y="300" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="J_NreWz0bblFOMJx16Kt-73" value="id (PK)&#xa;customer_id (FK)&#xa;flight_number (FK)" style="text" vertex="1" parent="J_NreWz0bblFOMJx16Kt-72">
+          <mxGeometry x="10" y="40" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="J_NreWz0bblFOMJx16Kt-74" style="endArrow=block;endFill=1;" edge="1" parent="1" source="J_NreWz0bblFOMJx16Kt-70" target="J_NreWz0bblFOMJx16Kt-68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J_NreWz0bblFOMJx16Kt-75" style="endArrow=block;endFill=1;" edge="1" parent="1" source="J_NreWz0bblFOMJx16Kt-72" target="J_NreWz0bblFOMJx16Kt-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J_NreWz0bblFOMJx16Kt-76" style="endArrow=block;endFill=1;" edge="1" parent="1" source="J_NreWz0bblFOMJx16Kt-72" target="J_NreWz0bblFOMJx16Kt-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
